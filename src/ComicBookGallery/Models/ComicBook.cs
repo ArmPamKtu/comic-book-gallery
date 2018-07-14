@@ -8,7 +8,7 @@ namespace ComicBookGallery.Models
     public class ComicBook
     {
         public int Id { get; set; }
-        public string SeriesTitile { get; set; }
+        public string SeriesTitle { get; set; }
         public int IssueNumber { get; set; }
         public string DescriptionHtml { get; set; }
         public Artist[] Artists { get; set; }
@@ -18,7 +18,7 @@ namespace ComicBookGallery.Models
         {
             get
             {
-                return SeriesTitile + " #" + IssueNumber; 
+                return SeriesTitle + " #" + IssueNumber; 
             }
         }
 
@@ -26,7 +26,7 @@ namespace ComicBookGallery.Models
         {
             get
             {
-                return SeriesTitile.Replace(" ", "-")
+                return SeriesTitle.Replace(" ", "-")
                     .ToLower() + "-" + IssueNumber + ".jpg";
             }
         }
